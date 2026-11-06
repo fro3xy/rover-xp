@@ -602,6 +602,9 @@ code { font-family: "Lucida Console", Consolas, monospace; font-size: 12px; }
   background: #fff;
   border: 2px inset #c8c4b8;
   padding: 6px 12px;
+  max-width: 100%;
+  font: 12px "Lucida Console", Consolas, monospace;
+  overflow-wrap: anywhere;
 }
 
 .ie-bar {

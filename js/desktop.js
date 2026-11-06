@@ -4,7 +4,7 @@ const lines = [
   "Microsoft Bob was my first house. XP was the backyard.",
   "Merlin, Links, Courtney — good company. I kept the desk.",
   "Vista packed me up. I never really left the hill.",
-  "The contract address is not ready. CA coming soon.",
+  "The contract address is CTjNx5hbF6fKQGnvBxqfWyxTuvMStqZNBMqZdJ7dpump.",
   "Search for bob, bark, or vista. I'll fetch something."
 ];
 
@@ -17,7 +17,7 @@ const catalog = [
   { q: ["vista", "retired", "2007"], t: "Windows Vista", d: "The animated companion was retired when Vista arrived in 2007." },
   { q: ["bark", "voice", "sound", "foley"], t: "Voice reel", d: "Barks and foley, recorded in-house. He never spoke English in the UI." },
   { q: ["personality", "patient", "silly"], t: "Personality", d: "Patient, eager, and a little silly. The unused notes say he knew he was software." },
-  { q: ["contract", "ca", "soon", "address"], t: "Contract address", d: "CA coming soon. There is no address yet." }
+  { q: ["contract", "ca", "address"], t: "Contract address", d: "CTjNx5hbF6fKQGnvBxqfWyxTuvMStqZNBMqZdJ7dpump" }
 ];
 
 const boot = document.getElementById("boot");
@@ -35,7 +35,7 @@ const shutdown = document.getElementById("shutdown");
 let z = 20;
 let line = 0;
 let booted = false;
-const CA_NOTE = "CA coming soon";
+const CA = "CTjNx5hbF6fKQGnvBxqfWyxTuvMStqZNBMqZdJ7dpump";
 
 function speak(text) {
   balloonText.textContent = text;
@@ -257,12 +257,11 @@ document.getElementById("goWiki").addEventListener("click", () => {
 
 document.getElementById("copySoon").addEventListener("click", async () => {
   try {
-    await navigator.clipboard.writeText(CA_NOTE);
+    await navigator.clipboard.writeText(CA);
+    document.getElementById("errorText").textContent = "Copied the contract address.";
   } catch {
-    /* clipboard may be blocked; the dialog still explains it */
+    document.getElementById("errorText").textContent = CA;
   }
-  document.getElementById("errorText").textContent =
-    "CA coming soon. There is no contract address yet — Rover copied that note, not a real address.";
   openWindow("error");
 });
 
