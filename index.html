@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rover the Dog</title>
+  <meta name="description" content="Meet Rover, the Windows XP Search Companion who helped you find files, folders, and other computers since 2001.">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/xp.css">
+</head>
+<body>
+  <div id="boot">
+    <div class="boot-flag" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+    <div class="boot-title">Microsoft<em>Windows</em> XP</div>
+    <div class="boot-bar"><i></i></div>
+    <p class="boot-skip">Click to continue</p>
+  </div>
+
+  <div id="welcome" class="hidden">
+    <div class="welcome-card">
+      <h1>to continue, click your user</h1>
+      <p>Rover has been waiting in the search pane since 2001.</p>
+      <button class="user-tile" id="loginBtn" type="button">
+        <img src="assets/rover.png" alt="">
+        <div>
+          <strong>Rover</strong>
+          <span>Search Companion · Logged on locally</span>
+        </div>
+      </button>
+    </div>
+    <div class="welcome-foot">
+      <button type="button" id="welcomeOff">Turn off computer</button>
+    </div>
+  </div>
+
+  <div id="desktop" class="hidden">
+    <div class="wallpaper" role="img" aria-label="Bliss wallpaper"></div>
+
+    <nav class="icons" aria-label="Desktop">
+      <button class="icon" data-open="meet" type="button"><div class="glyph">🐶</div><span>Rover</span></button>
+      <button class="icon" data-open="search" type="button"><div class="glyph">🔎</div><span>Search</span></button>
+      <button class="icon" data-open="facts" type="button"><div class="glyph">📄</div><span>Fun Facts</span></button>
+      <button class="icon" data-open="wiki" type="button"><div class="glyph">🌐</div><span>Internet</span></button>
+      <button class="icon" data-open="contract" type="button"><div class="glyph">📜</div><span>Contract</span></button>
+      <button class="icon" data-open="computer" type="button"><div class="glyph">💻</div><span>My Computer</span></button>
+      <button class="icon" data-open="recycle" type="button"><div class="glyph">🗑️</div><span>Recycle Bin</span></button>
+    </nav>
+
+    <div class="rover-pet" id="roverPet">
+      <img src="assets/rover.png" alt="Rover sitting on the desktop">
+    </div>
+    <div class="balloon" id="balloon">
+      <strong>Rover</strong>
+      <div id="balloonText">Need a file? I still remember where everything is.</div>
+    </div>
+
+    <section class="window open" id="win-meet" data-title="Rover - The Goodest Boy" style="left:calc(50% - 280px);top:28px;width:560px;">
+      <div class="titlebar"><img class="tb-icon" src="assets/favicon.png" alt=""><span>Rover - The Goodest Boy</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="window-body beige hero">
+        <img class="hero-dog" src="assets/rover.png" alt="Rover, the yellow Search Companion">
+        <h1>Meet Rover!</h1>
+        <p>The animated search companion from Windows XP. Your friendly helper since October 25, 2001.</p>
+        <div class="hero-actions">
+          <button class="xp-btn green jump" data-open="about" type="button">About Me</button>
+          <button class="xp-btn default jump" data-open="facts" type="button">Fun Facts</button>
+          <button class="xp-btn jump" data-open="wiki" type="button">Wiki</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="win-about" data-title="About Rover" style="left:48px;top:56px;width:520px;">
+      <div class="titlebar"><span>About Rover</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="window-body beige">
+        <div class="tabs">
+          <button class="tab active" data-tab="general" type="button">General</button>
+          <button class="tab" data-tab="story" type="button">Personality</button>
+          <button class="tab" data-tab="later" type="button">After XP</button>
+        </div>
+        <div class="tab-panel active" data-panel="general">
+          <p>Rover was the default Search Companion in Windows XP: a cartoon dog in the left pane while you looked for files, folders, and other computers.</p>
+          <p>He shipped with XP on October 25, 2001, drawn on the Microsoft Agent technology. The character files lived under <code>%windir%\srchasst</code>.</p>
+          <p>His first desk job was older than XP. In Microsoft Bob, March 1995, he was Rover Retriever, the golden retriever who walked people through a virtual house. XP kept the dog and gave him a search box.</p>
+        </div>
+        <div class="tab-panel" data-panel="story">
+          <p>On screen he was patient, eager, and a little silly. He tilted his head, wagged, and never spoke English. The sounds were recorded barks and foley, so he felt more alive than a clip-art mascot.</p>
+          <p>You could swap him for Merlin the wizard, Links the cat, or Courtney. Most people left the dog where he was.</p>
+          <p>Fans still pass around unused character notes: an optimistic helper who knew he lived in software. XP never told that story. The dog you actually got just helped you search.</p>
+        </div>
+        <div class="tab-panel" data-panel="later">
+          <p>Windows Vista retired the animated Search Companion in 2007. The pane went quiet. Rover did not get a farewell tour.</p>
+          <p>The idea of a helper sitting beside your work showed up again in later assistants. None of them had his collar, or the Bliss hill behind the window.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="win-facts" data-title="Fun Facts" style="left:300px;top:80px;width:500px;">
+      <div class="titlebar"><span>Fun Facts - Rover</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="menubar"><u>F</u>ile &nbsp; <u>E</u>dit &nbsp; <u>V</u>iew &nbsp; <u>H</u>elp</div>
+      <div class="window-body">
+        <table class="facts">
+          <tr><th>First appearance</th><td>Microsoft Bob, March 1995, as Rover Retriever</td></tr>
+          <tr><th>XP debut</th><td>October 25, 2001</td></tr>
+          <tr><th>Job</th><td>Default animated Search Companion</td></tr>
+          <tr><th>Engine</th><td>Microsoft Agent</td></tr>
+          <tr><th>Files</th><td>%windir%\srchasst</td></tr>
+          <tr><th>Stand-ins</th><td>Merlin, Links the cat, Courtney</td></tr>
+          <tr><th>Voice</th><td>Recorded barks and foley, not spoken English</td></tr>
+          <tr><th>Retired</th><td>Search Companion removed in Windows Vista (2007)</td></tr>
+          <tr><th>Nostalgia</th><td>Still fetching</td></tr>
+        </table>
+      </div>
+      <div class="statusbar">9 facts · local catalog</div>
+    </section>
+
+    <section class="window" id="win-search" data-title="Search Companion" style="left:180px;top:36px;width:700px;">
+      <div class="titlebar"><span>Search Companion</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="menubar"><u>F</u>ile &nbsp; <u>E</u>dit &nbsp; <u>V</u>iew &nbsp; <u>F</u>avorites &nbsp; <u>T</u>ools &nbsp; <u>H</u>elp</div>
+      <div class="window-body">
+        <div class="search-layout">
+          <aside class="search-side">
+            <img src="assets/rover.png" alt="Rover">
+            <h2>What are you looking for?</h2>
+            <p>I can hunt through a little pile of 2001. Files on this desktop are make-believe.</p>
+          </aside>
+          <div class="search-main">
+            <h3>Search for files or folders</h3>
+            <div class="search-row">
+              <input id="q" type="search" placeholder="All or part of the file name" aria-label="Search">
+              <button class="xp-btn default" id="doSearch" type="button">Search</button>
+            </div>
+            <div class="search-options">
+              <label><input type="radio" name="kind" checked> All files and folders</label>
+              <label><input type="radio" name="kind"> Pictures, music, or video</label>
+              <label><input type="radio" name="kind"> Documents</label>
+              <label><input type="radio" name="kind"> Computers or people</label>
+            </div>
+            <div class="results" id="results">
+              <p>Type a word like <em>bark</em>, <em>bob</em>, or <em>vista</em> and I'll sniff around.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="statusbar">Ready. This search never leaves the page.</div>
+    </section>
+
+    <section class="window" id="win-wiki" data-title="Internet Explorer" style="left:140px;top:48px;width:540px;">
+      <div class="titlebar"><span>Microsoft Internet Explorer</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="ie-bar">
+        Address
+        <input value="https://the-microsoft-windows-xp.fandom.com/wiki/Rover" readonly>
+        <button class="xp-btn" id="goWiki" type="button">Go</button>
+      </div>
+      <div class="window-body">
+        <div class="ie-page">
+          <h2>Rover on the Windows XP wiki</h2>
+          <p>Bob, the XP search pane, the other companions, and the long fan write-up live on the Microsoft Windows XP wiki. This desktop is the short visit.</p>
+          <p><a id="wikiLink" href="https://the-microsoft-windows-xp.fandom.com/wiki/Rover" target="_blank" rel="noopener">Open the Rover wiki page</a></p>
+        </div>
+      </div>
+      <div class="statusbar">Done</div>
+    </section>
+
+    <section class="window" id="win-contract" data-title="Contract Address" style="left:220px;top:110px;width:420px;">
+      <div class="titlebar"><span>Contract Address</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="window-body beige">
+        <div class="coming">
+          <div class="hourglass" aria-hidden="true"></div>
+          <h2>CA coming soon</h2>
+          <p>Rover is still searching. There is no contract address yet.</p>
+          <code id="caText">CA coming soon</code>
+          <button class="xp-btn default" type="button" id="copySoon">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="win-help" data-title="Help and Support" style="left:200px;top:64px;width:500px;">
+      <div class="titlebar"><span>Help and Support Center</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="window-body">
+        <div class="help-banner">Pick a Help topic</div>
+        <div class="help-body">
+          <p><strong>How do I search?</strong> Open Search from the Start menu. Rover sits in the left pane. You type on the right. The catalog is local and playful.</p>
+          <p><strong>Where did he go?</strong> Vista removed the Search Companion in 2007. In real XP you could change the character or turn him off. Here he stays.</p>
+          <p><a href="https://the-microsoft-windows-xp.fandom.com/wiki/Rover" target="_blank" rel="noopener">Read more on the XP wiki</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="window" id="win-notepad" data-title="Notepad" style="left:96px;top:96px;width:460px;height:340px;">
+      <div class="titlebar"><span>Untitled - Notepad</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="menubar"><u>F</u>ile &nbsp; <u>E</u>dit &nbsp; <u>F</u>ormat &nbsp; <u>V</u>iew &nbsp; <u>H</u>elp</div>
+      <div class="window-body">
+        <textarea class="notepad" aria-label="Notepad">From: Rover
+To: anyone still looking
+
+I used to live in the Search pane.
+Files, folders, other computers — that was the beat.
+
+If you hear a bark from %windir%\srchasst,
+that's just me making the rounds.
+
+Contract address: CA coming soon.
+No news ticker. Just grass, sky, and a dog who never quite logged off.
+</textarea>
+      </div>
+    </section>
+
+    <section class="window" id="win-computer" data-title="My Computer" style="left:120px;top:72px;width:460px;">
+      <div class="titlebar"><span>My Computer</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="window-body beige">
+        <div class="cards">
+          <div class="card"><h3>Local Disk (C:)</h3><p>WINDOWS · srchasst</p></div>
+          <div class="card"><h3>3.5 Floppy (A:)</h3><p>Empty. Rover already checked.</p></div>
+          <div class="card"><h3>Shared Documents</h3><p>Fun facts, written for people who miss the hill.</p></div>
+          <div class="card"><h3>Control Panel</h3><p>Luna blue, a green Start button, Tahoma everywhere.</p></div>
+        </div>
+      </div>
+      <div class="statusbar">4 objects</div>
+    </section>
+
+    <section class="window" id="win-recycle" data-title="Recycle Bin" style="left:340px;top:140px;width:360px;">
+      <div class="titlebar"><span>Recycle Bin</span>
+        <div class="caption"><button class="cap min" data-act="min" aria-label="Minimize">_</button><button class="cap max" data-act="max" aria-label="Maximize">□</button><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="menubar"><u>F</u>ile &nbsp; <u>E</u>dit &nbsp; <u>V</u>iew</div>
+      <div class="window-body beige recycle">
+        <p>The Recycle Bin is empty.</p>
+        <p>Vista did the packing. Nothing of Rover's is in here.</p>
+      </div>
+    </section>
+
+    <div class="window dialog" id="win-error" data-title="Search Companion">
+      <div class="titlebar"><span>Search Companion</span>
+        <div class="caption"><button class="cap close" data-act="close" aria-label="Close">×</button></div>
+      </div>
+      <div class="dialog-body">
+        <div class="info-mark" aria-hidden="true">i</div>
+        <p id="errorText">CA coming soon. There is no contract address yet.</p>
+      </div>
+      <div class="dialog-actions">
+        <button class="xp-btn default" data-act="close" type="button">OK</button>
+      </div>
+    </div>
+
+    <div class="start-menu" id="startMenu">
+      <div class="start-user">
+        <img src="assets/rover.png" alt="">
+        Rover
+      </div>
+      <div class="start-cols">
+        <div class="start-left">
+          <button class="start-item" data-open="search" type="button">🔎 <span>Search <small>files, folders, computers</small></span></button>
+          <button class="start-item" data-open="meet" type="button">🐶 <span>Rover <small>the goodest boy</small></span></button>
+          <button class="start-item" data-open="facts" type="button">📄 <span>Fun Facts <small>a short dossier</small></span></button>
+          <button class="start-item" data-open="wiki" type="button">🌐 <span>Internet <small>wiki page</small></span></button>
+          <button class="start-item" data-open="notepad" type="button">📝 <span>Notepad</span></button>
+          <button class="start-item" data-open="help" type="button">❓ <span>Help and Support</span></button>
+        </div>
+        <div class="start-right">
+          <button class="start-item" data-open="contract" type="button">Contract</button>
+          <button class="start-item" data-open="computer" type="button">My Computer</button>
+          <button class="start-item" data-open="recycle" type="button">Recycle Bin</button>
+        </div>
+      </div>
+      <div class="start-foot">
+        <button type="button" id="logOff">Log Off</button>
+        <button type="button" id="turnOff">Turn Off Computer</button>
+      </div>
+    </div>
+
+    <div class="context" id="context">
+      <button data-open="search" type="button">Search...</button>
+      <button data-open="meet" type="button">Open Rover</button>
+      <hr>
+      <button id="refreshDesktop" type="button">Refresh</button>
+      <button data-open="help" type="button">Properties</button>
+    </div>
+
+    <footer class="taskbar">
+      <button class="start-btn" id="startBtn" type="button" aria-haspopup="true" aria-expanded="false">
+        <span class="start-logo" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+        start
+      </button>
+      <button class="ca-bar" id="caBar" type="button">CA coming soon</button>
+      <div class="tasks" id="tasks"></div>
+      <div class="tray">
+        <img src="assets/favicon.png" alt="" class="tray-dog">
+        <span id="clock"></span>
+      </div>
+    </footer>
+  </div>
+
+  <div class="shutdown" id="shutdown">
+    <div class="shutdown-box">
+      <h2>Turn off computer</h2>
+      <p>What do you want the computer to do?</p>
+      <div class="shutdown-actions">
+        <button type="button" id="standBy">Stand By</button>
+        <button type="button" id="doShutdown">Turn Off</button>
+        <button type="button" id="cancelOff">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/desktop.js"></script>
+</body>
+</html>

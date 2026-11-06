@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 240" role="img" aria-label="A friendly golden cartoon dog">
+  <defs>
+    <radialGradient id="fur" cx="40%" cy="30%" r="70%">
+      <stop offset="0%" stop-color="#f6d27a"/>
+      <stop offset="70%" stop-color="#e0a93a"/>
+      <stop offset="100%" stop-color="#c88820"/>
+    </radialGradient>
+    <linearGradient id="ear" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c47a28"/>
+      <stop offset="100%" stop-color="#8a4e12"/>
+    </linearGradient>
+  </defs>
+  <g class="shadow">
+    <ellipse cx="110" cy="222" rx="62" ry="10" fill="#000" opacity="0.18"/>
+  </g>
+  <g class="rover">
+    <g class="tail">
+      <path d="M168 150c28 8 42-18 36-38" fill="none" stroke="#d49a32" stroke-width="14" stroke-linecap="round"/>
+      <path d="M204 112c8-14 2-24-8-22" fill="none" stroke="#e8b84a" stroke-width="10" stroke-linecap="round"/>
+    </g>
+    <ellipse cx="112" cy="158" rx="58" ry="50" fill="url(#fur)"/>
+    <ellipse cx="112" cy="168" rx="34" ry="28" fill="#f8e6b8"/>
+    <ellipse cx="72" cy="188" rx="16" ry="10" fill="#d49a32"/>
+    <ellipse cx="150" cy="188" rx="16" ry="10" fill="#d49a32"/>
+    <g class="head">
+      <ellipse cx="78" cy="78" rx="22" ry="36" fill="url(#ear)" transform="rotate(-18 78 78)"/>
+      <ellipse cx="148" cy="78" rx="22" ry="36" fill="url(#ear)" transform="rotate(18 148 78)"/>
+      <ellipse cx="112" cy="96" rx="52" ry="48" fill="url(#fur)"/>
+      <ellipse cx="112" cy="112" rx="28" ry="22" fill="#fff6dc"/>
+      <g class="eyes">
+        <ellipse cx="94" cy="90" rx="8" ry="10" fill="#1a120c"/>
+        <ellipse cx="130" cy="90" rx="8" ry="10" fill="#1a120c"/>
+        <ellipse cx="96" cy="86" rx="3" ry="4" fill="#fff"/>
+        <ellipse cx="132" cy="86" rx="3" ry="4" fill="#fff"/>
+      </g>
+      <ellipse cx="112" cy="112" rx="9" ry="7" fill="#2b1a12"/>
+      <path d="M112 119c0 10 10 16 18 12" fill="none" stroke="#2b1a12" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="86" cy="108" r="7" fill="#f0a090" opacity="0.45"/>
+      <circle cx="138" cy="108" r="7" fill="#f0a090" opacity="0.45"/>
+    </g>
+    <circle cx="112" cy="138" r="5" fill="#3a7bd5"/>
+  </g>
+  <style>
+    .tail { transform-origin: 168px 150px; animation: wag 0.7s ease-in-out infinite; }
+    .eyes { transform-origin: 112px 90px; animation: blink 4.2s infinite; }
+    @keyframes wag {
+      0%, 100% { transform: rotate(-12deg); }
+      50% { transform: rotate(18deg); }
+    }
+    @keyframes blink {
+      0%, 92%, 100% { transform: scaleY(1); }
+      96% { transform: scaleY(0.08); }
+    }
+  </style>
+</svg>
